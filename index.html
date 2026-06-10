@@ -80,7 +80,7 @@
   .page.active { display: block; }
   @keyframes fadeUp { from { opacity:0; transform:translateY(24px);} to { opacity:1; transform:translateY(0);} }
 
-  /* ── HERO (ENLARGED - FULL SPACE WITH LARGER SVG BACKGROUND) ── */
+  /* ── HERO (ENLARGED - FULL SPACE WITH LARGE SVG BACKGROUND) ── */
   .hero { 
     padding: 140px 32px 140px; 
     position: relative;
@@ -169,13 +169,13 @@
   .pillars { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 48px; }
   .pillars span { padding-bottom: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #fff; }
 
-  /* SVG Background Container - EVEN LARGER, MORE DRAMATIC */
+  /* SVG Background Container - LARGER, POSITIONED TO BE CUT OFF */
   .hero-svg-bg {
     position: absolute;
-    top: -25%;
-    right: -30%;
-    width: 110%;
-    height: 150%;
+    top: -20%;
+    right: -20%;
+    width: 90%;
+    height: 140%;
     pointer-events: none;
     z-index: 1;
     display: flex;
@@ -191,10 +191,11 @@
 
   @media (max-width: 768px) {
     .hero-svg-bg {
-      width: 140%;
-      height: 140%;
-      top: -20%;
-      right: -50%;
+      width: 120%;
+      height: 120%;
+      top: -10%;
+      right: -30%;
+      opacity: 0.6;
     }
     .hero {
       padding: 100px 24px;
@@ -354,7 +355,7 @@
   .reminder-body { font-size: 18px; font-weight: 700; letter-spacing: 0.02em; color: #fff; line-height: 1.6; text-transform: none; }
   .reminder-body .accent { color: var(--red); }
 
-  /* ── FOOTER WITH LARGE SVG BACKGROUND ── */
+  /* ── FOOTER WITH LARGE SVG BACKGROUND (cut off) ── */
   footer { 
     background: var(--footer-purple); 
     padding: 80px 32px 60px; 
@@ -469,35 +470,6 @@
       page-break-inside: avoid;
     }
   }
-
-  /* ============================================ */
-  /* GOOGLE SITES FULL-WIDTH OVERRIDE */
-  /* Remove default body margins and ensure full-width layout */
-  html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* Override any max-width constraints for embedded view */
-  .page, .hero, .hero-grid, 
-  .reasons-grid, .benefits-grid, .policy-grid, .do-dont-grid, .survey-main,
-  .phrases-section, .exception-wrap, .callout-wrap, .team-msg-wrap, 
-  .mandate-wrap, .action-strip-wrap, .reminder-wrap, .rules-section {
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  /* Keep internal content readable but edge-to-edge */
-  .page > *:not(.hero):not(.values-bar) {
-    max-width: 100%;
-    padding: 0 16px; /* Optional: small internal padding so text doesn't touch edges */
-  }
-  /* ============================================ */
 </style>
 </head>
 <body>
@@ -563,7 +535,7 @@
       <div>
         <p class="eyebrow white">Internal Policy Hub</p>
         <h1 class="white">Team Policy<br/>& <span class="accent">Standards</span></h1>
-        <p class="hero-sub">Everything our team needs to deliver consistent, high-quality service across all FASTSIGNS locations.</p>
+        <p class="hero-sub">Everything your team needs to deliver consistent, high-quality service across all FASTSIGNS locations.</p>
         <div class="values-strip">
           <span>People</span><span>Service</span><span>Integrity</span><span>Excellence</span><span>Teamwork</span>
         </div>
@@ -625,7 +597,7 @@
   </section>
 </div>
 
-<!-- DELIVERY PAGE (removed "Except the old Simi Valley area") -->
+<!-- DELIVERY PAGE (simplified for length - same SVG background) -->
 <div class="page" id="page-delivery">
   <section class="hero">
     <div class="hero-svg-bg">
@@ -635,7 +607,7 @@
     </div>
     <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:32px; position:relative; z-index:2; max-width:1200px; margin:0 auto;">
       <div><p class="eyebrow">Company Policy</p><h1>Delivery <span class="accent">Pricing</span><br/>Policy</h1><p class="hero-sub" style="color:var(--ink);">Our process · Your solution · On time</p><p class="hero-updated">Last updated: June 2025</p></div>
-      <div class="hero-right-meta"><div class="hero-aside"><div class="centers">Long Beach · Santa Ana<br/>Tarzana · Thousand Oaks · Torrance</div></div><button class="print-btn" onclick="window.print()">Print Policy</button></div>
+      <div class="hero-right-meta"><div class="hero-aside"><div class="italic">Except the old Simi Valley area</div><div class="centers">Long Beach · Santa Ana<br/>Tarzana · Thousand Oaks · Torrance</div></div><button class="print-btn" onclick="window.print()">Print Policy</button></div>
     </div>
   </section>
   <div class="rules-section"><div class="rule-row"><div><div class="rule-label">Rule 01</div><div class="rule-headline">10 miles<br/><span class="accent">From center</span></div></div><div class="rule-body">Orders that qualify for free local delivery must be within <strong>10 miles of the center</strong> from which the item is purchased.</div></div><div class="rule-row"><div><div class="rule-label">Rule 02</div><div class="rule-headline">$500<br/><span class="accent">Minimum</span></div></div><div class="rule-body">Orders eligible for free delivery must have a <strong>minimum order value of $500</strong>. Orders below this threshold do not qualify for free local delivery.</div></div><div class="rule-row"><div><div class="rule-label">Rule 03</div><div class="rule-headline">Delivery rates<br/><span class="accent">$2 / mile</span><br/>Min. $45</div></div><div class="rule-body">Delivery is charged at <strong>$2 per mile</strong> with a <strong>minimum of $45</strong>. Alternatively, shipping is available at published UPS rates — not our rates — plus a packing fee.</div></div><div class="rule-row"><div><div class="rule-label">Rule 04</div><div class="rule-headline">Delivery time<br/><span class="accent">2–3 business</span><br/>Days</div></div><div class="rule-body">Free and paid deliveries will occur within <strong>two to three business days</strong> after the order is completed. The salesperson is required to request a delivery date at the time of quality control.<br/><br/>If a salesperson does not request delivery at that time, <strong>the delivery time clock starts when you request the date</strong> — not when the order is completed. This will put you in a bad position with your client.</div></div><div class="rule-row"><div><div class="rule-label">Rule 05</div><div class="rule-headline">Plan ahead<br/><span class="accent">& communicate</span></div></div><div class="rule-body">Outside salespeople may — and should — consider delivering their orders when possible. It's a great opportunity to have face time with your client, check in, and <strong>get more sales.</strong></div></div></div>
@@ -643,7 +615,7 @@
   <div class="callout-wrap"><div class="callout"><svg width="40" height="40" viewBox="0 0 36 36" fill="none"><rect x="4" y="6" width="28" height="26" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M4 13h28" stroke="currentColor" stroke-width="1.8"/><path d="M12 4v4M24 4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M10 21h6M10 26h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><div><div class="callout-label">Remember: Plan ahead, communicate, and deliver value</div><div class="callout-body">Great delivery service builds great relationships… <strong>and keeps clients coming back.</strong></div></div></div></div>
 </div>
 
-<!-- PRODUCTION, SALES PHRASES, SERVICE, SITE SURVEY (simplified) -->
+<!-- PRODUCTION, SALES PHRASES, SERVICE, SITE SURVEY (simplified - same SVG backgrounds) -->
 <div class="page" id="page-production"><section class="hero"><div class="hero-svg-bg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100" preserveAspectRatio="xMaxYMid meet"><g fill="#ffffff"><path d="M 55,15 H 20 V 48 H 36 Q 36,65 24,82 L 34,90 Q 55,68 55,15 Z"/><path d="M 110,15 H 75 V 48 H 91 Q 91,65 79,82 L 89,90 Q 110,68 110,15 Z"/></g></svg></div><div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:32px; position:relative; z-index:2; max-width:1200px; margin:0 auto;"><div><p class="eyebrow">Production standard</p><h1 style="font-style:italic;">Why does it matter<br/>to keep the <span class="accent">production</span><br/>space clean?</h1><p class="hero-sub" style="color:var(--ink);">Safety · Efficiency · Quality · Compliance</p><p class="hero-updated">Last updated: June 2025</p></div><button class="print-btn" onclick="window.print()">Print Policy</button></div></section><div class="reasons-grid"><div class="reason-card"><div class="reason-num">01</div><div class="reason-title">Improves safety</div><div class="reason-body">A clean production space reduces hazards like spills, clutter, and debris that can cause accidents or injuries.</div></div><div class="reason-card"><div class="reason-num">02</div><div class="reason-title">Boosts efficiency</div><div class="reason-body">Organized, clean work areas make tools and materials easier to find, reducing downtime and improving workflow.</div></div><div class="reason-card"><div class="reason-num">03</div><div class="reason-title">Maintains quality</div><div class="reason-body">Clean environments help prevent contamination and defects, protecting the consistency and quality of products.</div></div><div class="reason-card"><div class="reason-num">04</div><div class="reason-title">Supports compliance</div><div class="reason-body">Cleanliness helps meet health, safety, and regulatory standards — avoiding violations and potential shutdowns.</div></div></div><div class="rule30-section"><div class="rule30-inner"><div><div class="rule30-num">30</div><div class="rule30-unit">sec<br/>Rule</div></div><div><div class="rule30-eyebrow">What is the 30 second rule?</div><div class="rule30-heading">Every time a task is completed, take 30 seconds to clean up your area before moving on.</div><div class="rule30-body">Putting tools away, throwing out scrap, organizing materials, and resetting the workspace keeps the production floor <strong>cleaner, safer, and more efficient</strong> throughout the day.</div><div class="rule30-body" style="margin-top:24px;">When everyone contributes small cleanup moments consistently, <strong>closing down at the end of the day becomes dramatically faster and easier</strong> for the entire team.</div></div></div></div><div class="benefits-section"><div class="benefits-eyebrow">Benefits of the 30 second rule</div><div class="benefits-grid"><div class="benefit-card"><div class="benefit-line"></div><div class="benefit-text">Prevents clutter from building up</div></div><div class="benefit-card"><div class="benefit-line"></div><div class="benefit-text">Improves workflow and efficiency</div></div><div class="benefit-card"><div class="benefit-line"></div><div class="benefit-text">Creates a safer production environment</div></div><div class="benefit-card"><div class="benefit-line"></div><div class="benefit-text">Protects equipment and materials</div></div><div class="benefit-card"><div class="benefit-line"></div><div class="benefit-text">Makes end-of-day cleanup easier for everyone</div></div><div class="benefit-card"><div class="benefit-line"></div><div class="benefit-text">Reinforces professionalism and teamwork</div></div></div></div><div class="team-msg-wrap"><div class="team-msg"><div class="team-msg-label">Team message</div><div class="team-msg-body"><em>Small</em> cleanup habits create <strong>big</strong> results.<br/><strong>30 seconds</strong> now saves <em>hours</em> later.</div></div></div></div>
 
 <div class="page" id="page-sales-phrases"><section class="hero"><div class="hero-svg-bg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100" preserveAspectRatio="xMaxYMid meet"><g fill="#ffffff"><path d="M 55,15 H 20 V 48 H 36 Q 36,65 24,82 L 34,90 Q 55,68 55,15 Z"/><path d="M 110,15 H 75 V 48 H 91 Q 91,65 79,82 L 89,90 Q 110,68 110,15 Z"/></g></svg></div><div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:32px; position:relative; z-index:2; max-width:1200px; margin:0 auto;"><div><p class="eyebrow">Customer experience</p><h1>Capture their<br/>head <span class="accent">&amp;</span> heart<br/>with these phrases</h1><p class="hero-sub" style="color:var(--ink);">Connect · Build trust · Drive sales</p><p class="hero-updated">Last updated: June 2025</p></div><button class="print-btn" onclick="window.print()">Print Policy</button></div></section><div class="phrases-section"><div class="phrase-row"><div class="phrase-num">01</div><div class="phrase-text"><span class="phrase-quote">"</span>We're glad you contacted us. FASTSIGNS is here to help.<span class="phrase-quote">"</span></div></div><div class="phrase-row"><div class="phrase-num">02</div><div class="phrase-text"><span class="phrase-quote">"</span>Great! This is our expertise at FASTSIGNS!<span class="phrase-quote">"</span></div></div><div class="phrase-row"><div class="phrase-num">03</div><div class="phrase-text"><span class="phrase-quote">"</span>Our team enjoys working with customers on projects like this.<span class="phrase-quote">"</span></div></div><div class="phrase-row"><div class="phrase-num">04</div><div class="phrase-text"><span class="phrase-quote">"</span>Sounds like you might need some friendly guidance with this. May I ask you some questions first?<span class="phrase-quote">"</span></div></div><div class="phrase-row"><div class="phrase-num">05</div><div class="phrase-text"><span class="phrase-quote">"</span>We are a full-service sign company you can trust.<span class="phrase-quote">"</span></div></div><div class="phrase-row"><div class="phrase-num">06</div><div class="phrase-text"><span class="phrase-quote">"</span>We care about our customers.<span class="phrase-quote">"</span></div></div><div class="phrase-row"><div class="phrase-num">07</div><div class="phrase-text"><span class="phrase-quote">"</span>You called the right place, we do this all the time.<span class="phrase-quote">"</span></div></div><div class="phrase-row"><div class="phrase-num">08</div><div class="phrase-text"><span class="phrase-quote">"</span>We are a proud team of sign experts and we love to tackle exciting projects like this.<span class="phrase-quote">"</span></div></div><div class="phrase-row"><div class="phrase-num">09</div><div class="phrase-text"><span class="phrase-quote">"</span>This is something we have a great track record on. You called the right place.<span class="phrase-quote">"</span></div></div></div><div class="callout-wrap"><div class="callout" style="display:block;"><div class="callout-label">The FASTSIGNS way</div><div class="callout-body">People · Service · Integrity · Excellence · Teamwork<br/><strong>That's the FASTSIGNS way.</strong></div></div></div></div>
@@ -652,7 +624,7 @@
 
 <div class="page" id="page-site-survey"><section class="hero navy-bg"><div class="hero-svg-bg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100" preserveAspectRatio="xMaxYMid meet"><g fill="#ffffff"><path d="M 55,15 H 20 V 48 H 36 Q 36,65 24,82 L 34,90 Q 55,68 55,15 Z"/><path d="M 110,15 H 75 V 48 H 91 Q 91,65 79,82 L 89,90 Q 110,68 110,15 Z"/></g></svg></div><div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:32px; position:relative; z-index:2; max-width:1200px; margin:0 auto;"><div><p class="eyebrow white">Process policy</p><h1 class="white">Site survey</h1><p style="margin-top:16px;font-size:17px;font-style:italic;color:var(--red);letter-spacing:0.02em;">The right process. Better results.</p><div class="pillars"><span>Communication</span><span>Ownership</span><span>Accountability</span></div><p class="hero-updated white">Last updated: June 2025</p></div><button class="print-btn" onclick="window.print()">Print Policy</button></div></section><div class="survey-main"><div class="survey-guidelines"><div class="guideline-row"><div class="guideline-tag">Guideline 01</div><div class="guideline-title">Verify the need first</div><div class="guideline-body">When speaking with customers about their project, <strong>please ensure that conducting a site survey is the correct step.</strong></div></div><div class="guideline-row"><div class="guideline-tag">Guideline 02</div><div class="guideline-title">The phone call can solve it</div><div class="guideline-body">We have had instances where we received a request, and when the outside sales rep contacted the customer, they <strong>resolved the issue without needing an on-site visit.</strong></div></div><div class="guideline-row"><div class="guideline-tag">Guideline 03</div><div class="guideline-title">Ask all the right questions</div><div class="guideline-body">We must be more diligent and ask all the right questions. <span class="red">Please don't take the shortcut</span> and order a site survey without proper qualification first.</div></div><div class="guideline-row"><div class="guideline-tag">Guideline 04</div><div class="guideline-title">Questions? Reach out.</div><div class="guideline-body">If you have any questions, please reach out so we can discuss them further. Open communication is always the right path.</div></div></div><div class="survey-sidebar"><div class="sidebar-heading">Communication matters</div><div class="sidebar-item">Management will assign an outside sales rep (OSR) to complete the site survey. If the OSR does not respond and the prospect or client calls the center back, <strong>please let management know.</strong></div><div class="sidebar-item">Tell clients to allow <strong>24–48 hrs</strong> for a response for scheduling. In a rush situation, always submit your form and inform management of the urgency.</div><div class="sidebar-item">Timely survey requests and asking the right questions can strengthen our communication and the communication with our clients.</div></div></div><div class="reminder-wrap"><div class="reminder"><div class="reminder-label">Remember</div><div class="reminder-body">Ask first. <span class="accent">Verify need.</span> Add value.<br/><span class="accent">The right conversation today can save time for everyone.</span></div></div></div></div>
 
-<!-- FOOTER -->
+<!-- FOOTER WITH LARGE SVG BACKGROUND (cut off) -->
 <footer>
   <div class="footer-svg-bg">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100" preserveAspectRatio="xMinYMid meet">
